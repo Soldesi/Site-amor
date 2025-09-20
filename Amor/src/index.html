@@ -2,159 +2,281 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nati Branding — Marketing & Design Personalizado</title>
-    <meta name="description"
-        content="Nati Branding — marketing digital e design personalizado para empreendedores e criadores de conteúdo.">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nati Bloom Media — Marketing & Design Personalizado</title>
+  <meta name="description" content="Nati Bloom Media — marketing digital e design personalizado para empreendedores e criadores de conteúdo." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- diagonal wrapper -->
+  <header class="site-header" role="banner" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Ir para o início">
+      <div class="logo"><img src="Imagens/Logo.png" alt="Nati Bloom Media logo"></div>
+      <div>
+        <div class="brand-name">Nati Bloom Media</div>
+        <div class="brand-sub">Marketing & Design Personalizado</div>
+      </div>
+    </a>
 
-    <header class="site-header" role="banner" id="siteHeader">
-        <a class="brand" href="#home" aria-label="Ir para o início">
-            <div class="logo"><img src="Imagens/Logo.png" alt="Nati Branding logo"></div>
-            <div>
-                <div class="brand-name">Nati Branding</div>
-                <div class="brand-sub">Marketing & Design Personalizado</div>
+    <nav class="main-nav" role="navigation" aria-label="Menu principal">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" id="navToggle">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#making-of">Making of</a></li>
+        <li><a href="#parcerias">Parcerias</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="diag">
+    <div class="container">
+      <div class="container-content">
+        <main class="hero" id="home">
+          <section class="hero-card">
+            <h1>Transformamos ideias em presença digital delicada e de impacto</h1>
+            <p class="lead">Ajudamos empreendedores e criadores de conteúdo a criar marcas autênticas — com atenção aos detalhes, carinho e estratégia.</p>
+
+            <div class="values">
+              <div class="value">
+                <h4>Dedicação</h4>
+                <p>Cada projeto recebe atenção e cuidado especiais.</p>
+              </div>
+              <div class="value">
+                <h4>Leveza</h4>
+                <p>Comunicação próxima, agradável e sem complicação.</p>
+              </div>
+              <div class="value">
+                <h4>Personalização</h4>
+                <p>Soluções adaptadas aos desejos de cada cliente.</p>
+              </div>
+              <div class="value">
+                <h4>Confiança</h4>
+                <p>Transparência e comprometimento em cada entrega.</p>
+              </div>
             </div>
-        </a>
 
-        <nav class="main-nav" role="navigation" aria-label="Menu principal">
-            <button class="nav-toggle" aria-expanded="false" aria-controls="menu" id="navToggle">Menu</button>
-            <ul id="menu" class="menu">
-                <li><a href="#servicos" aria-current="page">Serviços</a></li>
-                <li><a href="#valores">Missão</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="diag">
-        <div class="container">
-            <div class="container-content">
+          </section>
+        </main>
 
-                <main class="hero">
-                    <section class="hero-card">
-                        <h1>Transformamos ideias em presença digital delicada e de impacto</h1>
-                        <p class="lead">Ajudamos empreendedores e criadores de conteúdo a criar marcas autênticas — com
-                            atenção aos detalhes, carinho e estratégia.</p>
-
-                        <div class="values">
-                            <div class="value">
-                                <h4>Dedicação</h4>
-                                <p>Cada projeto recebe atenção e cuidado especiais.</p>
-                            </div>
-                            <div class="value">
-                                <h4>Leveza</h4>
-                                <p>Comunicação próxima, agradável e sem complicação.</p>
-                            </div>
-                            <div class="value">
-                                <h4>Personalização</h4>
-                                <p>Soluções adaptadas aos desejos de cada cliente.</p>
-                            </div>
-                            <div class="value">
-                                <h4>Confiança</h4>
-                                <p>Transparência e comprometimento em cada entrega.</p>
-                            </div>
-                        </div>
-
-                    </section>
-
-                </main>
-
-                <section class="section" id="servicos">
-                    <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Serviços</h2>
-                    <div class="cards">
-                        <div class="service card">
-                            <h3>Identidade visual</h3>
-                            <p>Criação de logotipos, paleta de cores, tipografias e aplicações para marca.</p>
-                        </div>
-                        <div class="service card">
-                            <h3>Social media</h3>
-                            <p>Planejamento e criação de conteúdo com estética personalizada e consistente.</p>
-                        </div>
-                        <div class="service card">
-                            <h3>Sites & Landing pages</h3>
-                            <p>Desenvolvimento de presença digital leve, rápida e fácil de gerenciar.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section" id="valores">
-                    <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Missão & Valores</h2>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-                        <div class="card">
-                            <h3>Missão</h3>
-                            <p class="muted-sm">Ajudar empreendedores e criadores de conteúdo a transformarem suas
-                                ideias em presença digital impactante, com cuidado e atenção aos detalhes, garantindo
-                                que cada projeto seja exatamente como o cliente imaginou.</p>
-                        </div>
-                        <div class="card">
-                            <h3>Valores</h3>
-                            <ul class="muted-sm" style="margin:0;padding-left:18px">
-                                <li>Dedicação</li>
-                                <li>Leveza</li>
-                                <li>Personalização</li>
-                                <li>Confiança</li>
-                                <li>Criatividade</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- contato agora no fim -->
-                <section class="section" id="contato">
-                    <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Fale com a Nati</h2>
-                    <div class="contact-card">
-                        <p class="muted-sm">Conte brevemente sobre seu projeto — responderemos em até 48h.</p>
-                        <form style="margin-top:12px">
-                            <label for="nome">Nome</label>
-                            <input id="nome" name="nome" placeholder="Seu nome" required>
-
-                            <label for="email" style="margin-top:10px">Email</label>
-                            <input id="email" name="email" type="email" placeholder="seu@email.com" required>
-
-                            <label for="assunto" style="margin-top:10px">Assunto</label>
-                            <select id="assunto" name="assunto" aria-label="Assunto">
-                                <option value="geral">Geral</option>
-                                <option value="orcamento">Orçamento</option>
-                                <option value="duvida">Dúvida técnica</option>
-                            </select>
-
-                            <label for="mensagem" style="margin-top:10px">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" placeholder="Descreva seu projeto"></textarea>
-
-                            <div style="display:flex;gap:10px;margin-top:12px">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                                <button type="reset" class="btn btn-ghost">Limpar</button>
-                            </div>
-
-                            <p class="muted-sm" style="margin-top:12px">Ao enviar, você concorda em receber comunicação
-                                sobre o projeto.</p>
-                        </form>
-                    </div>
-                </section>
-
-                <footer>
-                    <div>
-                        <strong>Nati Branding</strong>
-                        <div class="muted-sm">Marketing & Design — Atendimento personalizado</div>
-                    </div>
-                    <div class="muted-sm">© <span id="year"></span> • Todos os direitos reservados</div>
-                </footer>
-
+        <section class="section" id="portfolio">
+          <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Portfólio</h2>
+          <div class="cards">
+            <div class="card" data-project-id="proj-a" role="button" aria-haspopup="dialog" tabindex="0">
+              <h3>Projeto A</h3>
+              <p class="muted-sm">Exemplo de aplicação de identidade visual.</p>
             </div>
-        </div>
+            <div class="card" data-project-id="proj-b" role="button" aria-haspopup="dialog" tabindex="0">
+              <h3>Projeto B</h3>
+              <p class="muted-sm">Landing page e social media.</p>
+            </div>
+            <div class="card" data-project-id="proj-c" role="button" aria-haspopup="dialog" tabindex="0">
+              <h3>Projeto C</h3>
+              <p class="muted-sm">Soluções personalizadas para criadores.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Templates dos projetos (conteúdo em HTML — fácil de editar) -->
+        <template id="tmpl-proj-a">
+          <div class="proj-data">
+            <h2 class="proj-title">Projeto A</h2>
+            <div class="proj-subtitle">Identidade visual completa</div>
+
+            <div class="proj-gallery">
+              <img src="assets/proj-a-1.jpg" alt="Mockup 1 - Projeto A">
+              <img src="assets/proj-a-2.jpg" alt="Mockup 2 - Projeto A">
+              <img src="assets/proj-a-3.jpg" alt="Mockup 3 - Projeto A">
+            </div>
+
+            <div class="proj-description">
+              <p>Projeto A: identidade visual desenvolvida com foco em delicadeza e presença digital. Inclui logo, paleta, tipografia e aplicações para social media.</p>
+              <p>Entregáveis: Logo, manual básico, templates para Instagram, mockups para site.</p>
+            </div>
+
+            <div class="proj-meta">
+              <p><strong>Serviços:</strong> Branding • Social</p>
+              <p><strong>Ano:</strong> 2025</p>
+            </div>
+
+            <a class="proj-cta" href="#" target="_blank" rel="noopener">Ver projeto</a>
+          </div>
+        </template>
+
+        <template id="tmpl-proj-b">
+          <div class="proj-data">
+            <h2 class="proj-title">Projeto B</h2>
+            <div class="proj-subtitle">Landing page & social</div>
+
+            <div class="proj-gallery">
+              <img src="assets/proj-b-1.jpg" alt="Mockup 1 - Projeto B">
+              <img src="assets/proj-b-2.jpg" alt="Mockup 2 - Projeto B">
+            </div>
+
+            <div class="proj-description">
+              <p>Projeto B: landing page otimizada para conversão, com hero focado em oferta e kit de posts para redes sociais com linguagem visual coesa.</p>
+              <p>Resultados: aumento de engajamento e consequente melhora na captação de leads.</p>
+            </div>
+
+            <div class="proj-meta">
+              <p><strong>Serviços:</strong> Webdesign • Conteúdo</p>
+              <p><strong>Ano:</strong> 2024</p>
+            </div>
+
+            <a class="proj-cta" href="#" target="_blank" rel="noopener">Ver projeto</a>
+          </div>
+        </template>
+
+        <template id="tmpl-proj-c">
+          <div class="proj-data">
+            <h2 class="proj-title">Projeto C</h2>
+            <div class="proj-subtitle">Soluções personalizadas</div>
+
+            <div class="proj-gallery">
+              <img src="assets/proj-c-1.jpg" alt="Mockup 1 - Projeto C">
+              <img src="assets/proj-c-2.jpg" alt="Mockup 2 - Projeto C">
+              <img src="assets/proj-c-3.jpg" alt="Mockup 3 - Projeto C">
+            </div>
+
+            <div class="proj-description">
+              <p>Projeto C: pacotes customizados para criadores — templates para conteúdo, direção visual e layouts para destaque.</p>
+              <p>Inclui consultoria de posicionamento e pacote de entregáveis editáveis.</p>
+            </div>
+
+            <div class="proj-meta">
+              <p><strong>Serviços:</strong> Branding • Templates</p>
+              <p><strong>Ano:</strong> 2025</p>
+            </div>
+
+            <a class="proj-cta" href="#" target="_blank" rel="noopener">Ver projeto</a>
+          </div>
+        </template>
+        <!-- Fim dos templates -->
+
+        <section class="section" id="sobre">
+          <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Sobre mim</h2>
+          <div class="card">
+            <p class="muted-sm">Breve apresentação da Nati — formação, abordagem e valores.</p>
+          </div>
+        </section>
+
+        <section class="section" id="depoimentos">
+          <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Depoimentos</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Cliente X</h3>
+              <p class="muted-sm">"Excelente trabalho — recomendo!"</p>
+            </div>
+            <div class="card">
+              <h3>Cliente Y</h3>
+              <p class="muted-sm">"Criatividade e entrega dentro do prazo."</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="making-of">
+          <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Making of</h2>
+          <div class="card">
+            <p class="muted-sm">Processo criativo e bastidores dos projetos.</p>
+          </div>
+        </section>
+
+        <section class="section" id="parcerias">
+          <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Parcerias</h2>
+          <div class="card">
+            <p class="muted-sm">Marcas e colaboradores com quem já trabalhei.</p>
+          </div>
+        </section>
+
+        <section class="section" id="contato">
+          <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Fale com a Nati</h2>
+          <div class="contact-card">
+            <p class="muted-sm">Conte brevemente sobre seu projeto — responderemos em até 48h.</p>
+            <form style="margin-top:12px">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" placeholder="Seu nome" required>
+
+              <label for="email" style="margin-top:10px">Email</label>
+              <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+
+              <label for="assunto" style="margin-top:10px">Assunto</label>
+              <select id="assunto" name="assunto" aria-label="Assunto">
+                <option value="portfolio">Portfólio</option>
+                <option value="orcamento">Orçamento</option>
+                <option value="duvida">Dúvida técnica</option>
+              </select>
+
+              <label for="mensagem" style="margin-top:10px">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Descreva seu projeto"></textarea>
+
+              <div style="display:flex;gap:10px;margin-top:12px">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-ghost">Limpar</button>
+              </div>
+
+              <p class="muted-sm" style="margin-top:12px">Ao enviar, você concorda em receber comunicação sobre o projeto.</p>
+            </form>
+          </div>
+        </section>
+
+        <footer>
+          <div>
+            <strong>Nati Bloom Media</strong>
+            <div class="muted-sm">Marketing & Design — Atendimento personalizado</div>
+          </div>
+          <div class="muted-sm">© <span id="year"></span> • Todos os direitos reservados</div>
+        </footer>
+
+      </div>
     </div>
+  </div>
 
-    <img class="flower-decor" src="assets/flower-decor.png" alt="decor" width="260">
+  <img class="flower-decor" src="assets/flower-decor.png" alt="decor" width="260">
 
-    <script src="scripts.js"></script>
+  <!-- Project modal (colocar antes do scripts.js) -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="projectModalTitle">
+    <div class="project-modal__overlay" data-close></div>
+
+    <div class="project-modal__panel" role="document" aria-describedby="projectModalDescription">
+      <button class="project-modal__close" id="projectModalClose" aria-label="Fechar">×</button>
+
+      <div class="project-modal__content">
+        <header class="project-modal__header">
+          <h2 id="projectModalTitle">Título do projeto</h2>
+          <div class="project-modal__subtitle" id="projectModalSubtitle">Subtítulo / short summary</div>
+        </header>
+
+        <div class="project-modal__body">
+          <div>
+            <div class="project-modal__gallery" id="projectModalGallery" aria-live="polite" aria-label="Galeria do projeto">
+              <!-- imagens geradas dinamicamente a partir do <template> -->
+            </div>
+
+            <div class="project-modal__description" id="projectModalDescription">
+              <!-- descrição dinâmica -->
+            </div>
+          </div>
+
+          <aside class="project-modal__aside">
+            <div class="project-modal__meta" id="projectModalMeta">
+              <!-- meta (ex.: serviços, ano, link) -->
+            </div>
+
+            <div class="project-modal__footer">
+              <a id="projectModalCTA" class="btn btn-primary" href="#" target="_blank" rel="noopener">Ver projeto</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim do modal -->
+
+  <script src="scripts.js"></script>
 </body>
 
 </html>
