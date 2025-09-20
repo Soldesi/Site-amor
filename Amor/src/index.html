@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nati Branding — Marketing & Design Personalizado</title>
+    <meta name="description"
+        content="Nati Branding — marketing digital e design personalizado para empreendedores e criadores de conteúdo.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- diagonal wrapper -->
+
+    <header class="site-header" role="banner" id="siteHeader">
+        <a class="brand" href="#home" aria-label="Ir para o início">
+            <div class="logo"><img src="Imagens/Logo.png" alt="Nati Branding logo"></div>
+            <div>
+                <div class="brand-name">Nati Branding</div>
+                <div class="brand-sub">Marketing & Design Personalizado</div>
+            </div>
+        </a>
+
+        <nav class="main-nav" role="navigation" aria-label="Menu principal">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu" id="navToggle">Menu</button>
+            <ul id="menu" class="menu">
+                <li><a href="#servicos" aria-current="page">Serviços</a></li>
+                <li><a href="#valores">Missão</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="diag">
+        <div class="container">
+            <div class="container-content">
+
+                <main class="hero">
+                    <section class="hero-card">
+                        <h1>Transformamos ideias em presença digital delicada e de impacto</h1>
+                        <p class="lead">Ajudamos empreendedores e criadores de conteúdo a criar marcas autênticas — com
+                            atenção aos detalhes, carinho e estratégia.</p>
+
+                        <div class="values">
+                            <div class="value">
+                                <h4>Dedicação</h4>
+                                <p>Cada projeto recebe atenção e cuidado especiais.</p>
+                            </div>
+                            <div class="value">
+                                <h4>Leveza</h4>
+                                <p>Comunicação próxima, agradável e sem complicação.</p>
+                            </div>
+                            <div class="value">
+                                <h4>Personalização</h4>
+                                <p>Soluções adaptadas aos desejos de cada cliente.</p>
+                            </div>
+                            <div class="value">
+                                <h4>Confiança</h4>
+                                <p>Transparência e comprometimento em cada entrega.</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                </main>
+
+                <section class="section" id="servicos">
+                    <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Serviços</h2>
+                    <div class="cards">
+                        <div class="service card">
+                            <h3>Identidade visual</h3>
+                            <p>Criação de logotipos, paleta de cores, tipografias e aplicações para marca.</p>
+                        </div>
+                        <div class="service card">
+                            <h3>Social media</h3>
+                            <p>Planejamento e criação de conteúdo com estética personalizada e consistente.</p>
+                        </div>
+                        <div class="service card">
+                            <h3>Sites & Landing pages</h3>
+                            <p>Desenvolvimento de presença digital leve, rápida e fácil de gerenciar.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section" id="valores">
+                    <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Missão & Valores</h2>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                        <div class="card">
+                            <h3>Missão</h3>
+                            <p class="muted-sm">Ajudar empreendedores e criadores de conteúdo a transformarem suas
+                                ideias em presença digital impactante, com cuidado e atenção aos detalhes, garantindo
+                                que cada projeto seja exatamente como o cliente imaginou.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Valores</h3>
+                            <ul class="muted-sm" style="margin:0;padding-left:18px">
+                                <li>Dedicação</li>
+                                <li>Leveza</li>
+                                <li>Personalização</li>
+                                <li>Confiança</li>
+                                <li>Criatividade</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- contato agora no fim -->
+                <section class="section" id="contato">
+                    <h2 style="font-family:'Playfair Display',serif;margin:8px 0 18px">Fale com a Nati</h2>
+                    <div class="contact-card">
+                        <p class="muted-sm">Conte brevemente sobre seu projeto — responderemos em até 48h.</p>
+                        <form style="margin-top:12px">
+                            <label for="nome">Nome</label>
+                            <input id="nome" name="nome" placeholder="Seu nome" required>
+
+                            <label for="email" style="margin-top:10px">Email</label>
+                            <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+
+                            <label for="assunto" style="margin-top:10px">Assunto</label>
+                            <select id="assunto" name="assunto" aria-label="Assunto">
+                                <option value="geral">Geral</option>
+                                <option value="orcamento">Orçamento</option>
+                                <option value="duvida">Dúvida técnica</option>
+                            </select>
+
+                            <label for="mensagem" style="margin-top:10px">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Descreva seu projeto"></textarea>
+
+                            <div style="display:flex;gap:10px;margin-top:12px">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="reset" class="btn btn-ghost">Limpar</button>
+                            </div>
+
+                            <p class="muted-sm" style="margin-top:12px">Ao enviar, você concorda em receber comunicação
+                                sobre o projeto.</p>
+                        </form>
+                    </div>
+                </section>
+
+                <footer>
+                    <div>
+                        <strong>Nati Branding</strong>
+                        <div class="muted-sm">Marketing & Design — Atendimento personalizado</div>
+                    </div>
+                    <div class="muted-sm">© <span id="year"></span> • Todos os direitos reservados</div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <img class="flower-decor" src="assets/flower-decor.png" alt="decor" width="260">
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

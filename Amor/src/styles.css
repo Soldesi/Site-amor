@@ -1,0 +1,724 @@
+:root {
+    /* Paleta atualizada: roxo mais presente + textos em preto */
+    --bg: #a165ccb6;
+    /* fundo geral — lavanda suave */
+    --card-bg: #ffffff;
+    /* cards claros para legibilidade */
+    --muted: #6b4b86;
+    /* texto secundário (lavanda/roxo médio) */
+    --purple-100: #f3e8fb;
+    --purple-200: #e9d3fb;
+    --purple-400: #b892f0;
+    --purple-600: #7a39d8;
+    /* roxo principal mais vivo */
+    --purple-700: #5a1fa8;
+    /* roxo escuro para contrastes */
+    --accent: #cfa3ff;
+    /* lilac delicado para CTAs */
+    --text: #0b0b0b;
+    /* texto principal em preto */
+    --black: #0b0b0b;
+    --radius: 14px;
+    --max-width: 1100px;
+    --shadow: 0 12px 28px rgba(11, 11, 11, 0.06);
+    --btn-transition: 220ms cubic-bezier(.2, .9, .2, 1);
+}
+
+/* reset / base */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg);
+    /* fundo sólido, sem gradiente pesado */
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* diagonal wrapper (mantive o pedido anterior) */
+.diag {
+    display: flex;
+    justify-content: center;
+    padding: 36px 12px
+}
+
+.container {
+    max-width: var(--max-width);
+    transform: rotate(-2.8deg);
+    margin-top: 80px;
+}
+
+.container-content {
+    background: var(--card-bg);
+    padding: 32px;
+    border-radius: 20px;
+    transform: rotate(2.8deg);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(90, 31, 168, 0.06);
+}
+
+/* HEADER */
+
+.site-header {
+    position: fixed;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    max-width: var(--max-width);
+    height: 100px;
+    z-index: 120;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0px 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.82);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(90, 31, 168, 0.08);
+    box-shadow: 0 8px 30px rgba(11, 11, 11, 0.06);
+    transition: padding 260ms ease, transform 260ms ease, box-shadow 260ms ease, top 220ms ease, opacity 220ms ease;
+}
+
+.site-header.scrolled {
+    padding: 8px 18px;
+    box-shadow: 0 18px 46px rgba(11, 11, 11, 0.10);
+    top: 6px;
+}
+
+
+.site-header.hidden {
+    transform: translateX(-50%) translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.site-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none
+}
+
+.site-header .logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 0 0 88px;
+    display: grid;
+    place-items: center;
+}
+.site-header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(1);
+    border-radius: 12px; 
+}
+
+.brand-name {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--purple-700);
+    font-family: 'Playfair Display', serif
+}
+
+.brand-sub {
+    display: none
+}
+
+/* hide small subtitle to save space in fixed header */
+
+/* nav inside header */
+.site-header .main-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.site-header .menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.site-header .menu a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: var(--purple-700);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 200ms ease
+}
+
+/* accent on hover (use the refined pill effect) */
+.site-header .menu a:hover,
+.site-header .menu a:focus {
+    background: linear-gradient(90deg, var(--purple-600), var(--purple-700));
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(90, 31, 168, 0.12);
+}
+
+/* mobile: make nav toggle visible and menu collapsible */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(90, 31, 168, 0.08);
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: var(--purple-700);
+    cursor: pointer;
+}
+
+@media (max-width: 780px) {
+    .site-header {
+        width: calc(100% - 24px);
+        padding: 10px;
+        top: 10px
+    }
+
+    .brand-name {
+        font-size: 16px
+    }
+
+    .brand-sub {
+        display: none
+    }
+
+    .nav-toggle {
+        display: inline-flex
+    }
+
+    .site-header .menu {
+        position: absolute;
+        right: 18px;
+        top: 64px;
+        background: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: 0 14px 36px rgba(11, 11, 11, 0.08);
+        padding: 10px;
+        flex-direction: column;
+        display: none;
+        min-width: 180px
+    }
+
+    .site-header .menu.open {
+        display: flex
+    }
+
+    .site-header .menu li {
+        width: 100%
+    }
+
+    .site-header .menu a {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px
+    }
+}
+
+/* focus-visible accessibility */
+.site-header .menu a:focus-visible {
+    outline: 3px solid rgba(122, 57, 216, 0.12);
+    outline-offset: 4px;
+}
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px
+}
+
+.logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 0 0 88px;
+    display: grid;
+    place-items: center;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--purple-700);
+    font-weight: 700;
+    letter-spacing: 0.2px
+}
+
+.brand-sub {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.main-nav {
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+    /* espaçamento entre itens */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* link base */
+.menu a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 999px;
+    /* pílula arredondada */
+    color: var(--purple-700);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition:
+        transform 240ms cubic-bezier(.2, .9, .2, 1),
+        color 220ms ease,
+        box-shadow 240ms cubic-bezier(.2, .9, .2, 1),
+        background-color 240ms ease;
+    will-change: transform, box-shadow;
+}
+
+/* efeito de hover: pílula roxa com sombra e leve elevação */
+.menu a:hover,
+.menu a:focus {
+    background: linear-gradient(90deg, var(--purple-600), var(--purple-700));
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(90, 31, 168, 0.14);
+    outline: none;
+}
+
+/* linha animada abaixo do link (grow from left) */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: -10px;
+    /* distância da base do link */
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--purple-600), var(--purple-700));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 260ms cubic-bezier(.22, .9, .3, 1), opacity 200ms ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ativa a linha no hover/focus */
+.menu a:hover::after,
+.menu a:focus::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* foco visível para teclado */
+.menu a:focus-visible {
+    box-shadow: 0 10px 30px rgba(90, 31, 168, 0.12);
+    outline: 3px solid rgba(122, 57, 216, 0.12);
+    outline-offset: 4px;
+}
+
+/* versão reduzida (mobile): empilha ou coloca menu toggle */
+@media (max-width: 560px) {
+    .menu {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .menu a::after {
+        bottom: -8px;
+        height: 2px;
+        left: 18%;
+        right: 18%;
+    }
+}
+
+/* HERO */
+.hero {
+    margin-top: 28px
+}
+
+.hero-card {
+    background: transparent;
+    padding: 0;
+    border-radius: var(--radius)
+}
+
+.card,
+.value {
+    transition: transform var(--btn-transition), box-shadow var(--btn-transition), background-color var(--btn-transition), border-color var(--btn-transition);
+    will-change: transform, box-shadow;
+    /* melhora performance */
+    cursor: pointer;
+}
+
+/* Hover effect (matching .btn-ghost feel) */
+.card:hover,
+.value:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(90, 31, 168, 0.10);
+    /* leve elevação roxa */
+    background: var(--purple-100);
+    /* fundo suave roxo ao passar o mouse */
+}
+
+/* Pequena variação para .value que já tem gradiente: só elevamos e escurecemos levemente */
+.value:hover {
+    background: linear-gradient(180deg, var(--purple-200), var(--purple-400));
+    color: #fff;
+}
+
+/* Focus (teclado) — acessibilidade */
+.card:focus,
+.value:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(90, 31, 168, 0.12);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: -30px 0 10px;
+    color: var(--purple-700)
+}
+
+p.lead {
+    color: var(--muted);
+    margin: 0 0 18px
+}
+
+/* CTAs - animações adicionadas */
+.cta-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px
+}
+
+.btn {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    transition: transform var(--btn-transition), box-shadow var(--btn-transition), opacity var(--btn-transition);
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* botão primário: roxo vivo com micro-animação gradient */
+.btn-primary {
+    background: linear-gradient(90deg, var(--purple-600) 0%, var(--purple-700) 60%);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(122, 57, 216, 0.12);
+    border: 1px solid rgba(90, 31, 168, 0.14);
+}
+
+.btn-primary::after {
+    /* shimmer sutil ao passar o mouse (movimento suave) */
+    content: "";
+    position: absolute;
+    left: -40%;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
+    transform: skewX(-20deg);
+    opacity: 0;
+    transition: opacity 400ms ease, left 400ms ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(90, 31, 168, 0.14);
+}
+
+.btn-primary:hover::after {
+    left: 120%;
+    opacity: 1;
+    transition: left 650ms linear, opacity 120ms linear
+}
+
+.btn-primary:active {
+    transform: translateY(-1px) scale(.998);
+    box-shadow: 0 8px 18px rgba(90, 31, 168, 0.08)
+}
+
+.btn-primary:focus {
+    outline: 3px solid rgba(122, 57, 216, 0.14);
+    outline-offset: 3px
+}
+
+/* botão secundário: contorno roxo */
+.btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(90, 31, 168, 0.12);
+    color: var(--purple-700);
+    transition: all var(--btn-transition);
+}
+
+.btn-ghost:hover {
+    background: var(--purple-100);
+    transform: translateY(-3px)
+}
+
+.btn-ghost:active {
+    transform: translateY(0)
+}
+
+/* animação de pulso discreto em foco (acessibilidade visual ao teclado) */
+.btn:focus {
+    box-shadow: 0 6px 18px rgba(90, 31, 168, 0.08)
+}
+
+/* VALUES */
+.values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 18px
+}
+
+.value {
+    background: linear-gradient(180deg, var(--purple-100), var(--purple-200));
+    padding: 12px;
+    border-radius: 12px;
+    color: var(--purple-700)
+}
+
+.value h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--purple-700)
+}
+
+.value p {
+    margin: 0;
+    color: var(--purple-700);
+    font-size: 13px
+}
+
+/* SECTIONS & CARDS */
+.section {
+    margin-top: 34px
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+.card {
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(90, 31, 168, 0.288);
+    box-shadow: 0 8px 20px rgba(90, 31, 168, 0.03)
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: var(--purple-700)
+}
+
+.card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px
+}
+
+/* CONTATO (agora no fim) */
+.contact-card {
+    background: var(--card-bg);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid rgba(90, 31, 168, 0.288);
+    margin-top: 12px;
+    box-shadow: 0 8px 22px rgba(90, 31, 168, 0.04)
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(90, 31, 168, 0.185);
+    background: transparent;
+    color: var(--text);
+    font-size: 14px;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--purple-600);
+    box-shadow: 0 6px 18px rgba(122, 57, 216, 0.08);
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(11, 11, 11, 0.35);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical
+}
+
+.muted-sm {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+/* RODAPÉ */
+footer {
+    margin-top: 42px;
+    padding: 22px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, var(--purple-200), var(--purple-100));
+    border: 1px solid rgba(90, 31, 168, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--purple-700);
+}
+
+/* DECOR */
+.flower-decor {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    opacity: 0.06;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 6px 18px rgba(90, 31, 168, 0.06));
+    pointer-events: none
+}
+
+/* pequenas animações adicionais opcionais */
+/* leve flutuação nas cards para dar sensação de dinamismo */
+@keyframes floatCard {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-6px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.card:hover {
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+/* RESPONSIVO */
+@media (max-width:960px) {
+    .container {
+        max-width: 92%
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .brand-name {
+        font-size: 22px
+    }
+
+    .container {
+        transform: rotate(-1.5deg)
+    }
+
+    .container-content {
+        transform: rotate(1.5deg)
+    }
+}
+
+@media (max-width:560px) {
+    .cards {
+        grid-template-columns: 1fr
+    }
+
+    .values {
+        grid-template-columns: 1fr
+    }
+
+    .logo {
+        width: 64px;
+        height: 64px
+    }
+
+    header {
+        gap: 12px
+    }
+
+    .container {
+        transform: rotate(0)
+    }
+
+    .container-content {
+        transform: rotate(0);
+        border-radius: 12px
+    }
+}
+
+/* utilitários */
+.hidden-sm {
+    display: none
+}
